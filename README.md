@@ -1,4 +1,4 @@
-### README progress... ![10%](https://progress-bar.dev/10)
+### README progress... ![15%](https://progress-bar.dev/15)
 
 # SEI Project Three: Museum Mapper
 
@@ -18,7 +18,7 @@
  ## 1. Project Overview
 As a group of four, we were briefed to **build a full-stack application**. As a group we had to decide on a common theme for the project. We all made a list of interests we had and from that we both had a common interest in museums and decided to build a website dedicated to information about natural history museums in England.
 
-<img width="2048" alt="Screenshot 2022-01-02 at 13 34 23" src="https://user-images.githubusercontent.com/88886169/147877473-e40126bc-dcea-435a-a9f3-198d08c720b2.png">
+<img width="1800" alt="Home" src="https://user-images.githubusercontent.com/88886169/147877473-e40126bc-dcea-435a-a9f3-198d08c720b2.png">
 
 #### Deployed version available here: 👉🏽👉🏽[*Museum Mapper*](https://museummapperkm.herokuapp.com/) 👈🏽👈🏽
 
@@ -60,6 +60,8 @@ As a group of four, we were briefed to **build a full-stack application**. As a 
 - Asana- Planning
 - Zoom
 - Slack
+- Heroku
+- FontAwesome
 
 
 ## 4. Project Timeline- 7 Days
@@ -70,14 +72,18 @@ We first decided to create a museum mapper app as a group. We took our time to p
 <img width="450" alt="Home" src="https://user-images.githubusercontent.com/88886169/147878538-19704ac9-64bd-48e2-96e2-cdd0d5f39935.png"> <img width="450" alt="Index" src="https://user-images.githubusercontent.com/88886169/147878543-22a500f8-2de8-4a13-862c-c62f5bd679af.png"> <img width="450" alt="Register" src="https://user-images.githubusercontent.com/88886169/147878551-125d7493-15b7-4619-a3a5-00b076c220d4.png"> <img width="450" img height="340" alt="Screenshot 2022-01-02 at 14 21 09" src="https://user-images.githubusercontent.com/88886169/147878755-80600529-dab2-4ea7-9a31-39a7997c7e80.png">
 
 
-
-
-Once we were comfortable with the dataset it was then time to create a wireframe of the components and how they would all relate to each other. We wanted a homepage with a search functionality as well as three card categories (monster, spell and trap) displaying a variety of cards on different pages. Each card within the selected category would then be clickable so that the user is taken to a seperate page where they can read up on the details of the specific card they clicked.
-
-<img width="976" alt="Screenshot 2021-12-14 at 17 32 45" src="https://user-images.githubusercontent.com/88886169/146049877-8d95f00d-38c6-4cd0-856d-d17cb437e0d3.png">
-
 ### Getting Started:
-We started coding our project by creating the app using the command `npx create-react-app APP_NAME --template cra-template-ga-ldn`, adding the origin of our repo name to GitHub and pushing up. Then once inside the app we installed `yarn` and then typed in the command `yarn start` to run the server. We then installed `Bulma`, `React-Router-Dom`, `Axios` and `Animate.css` as these were the dependencies we needed.
+
+### Backend
+
+We agreed as a group to programme the backend components of the project together so that we could all help each other code this part and to also limit the amount of time spent on the backend. One person would screenshare over a zoom videocall and the others would guide the person coding and also look out for any errors/mistakes. The back end took a few days to create, with each member of the team coding, guiding and looking out for errors/mistakes during the live coding session. We also used this time to discuss and implement the embedded or referenced relationshiops for our App. In order to seed data into the app we divided certain letters within a databas of museums to each member of the group to obtain details about the museum's location, key collections, and one image. Each member of the group then merged their museum data within the seeds file. The backend was created as a CRUD API, which used MongoDB, Mongoose, NodeJS and Express. Finally, I took up the task of adding better quality images and further images for each museum we had listed on the App, for the purposes of a carousel which I would later create. As we were creating a map with geolocations of each museum I also compiled a seeds file with the lattitude and longitude location of each museum, this assisted my colleqgue who build the map component for the App.
+
+
+
+### Front-end
+
+For the front-end, we would meet in our daily stand ups (morning and evening) and discuss what components everyone wanted to focus on for the day and what thewy acomplished that day. For this project, I worked on the Navbar, Footer, Favicon, Carousel and part of the Profile. I also worked on the CSS for the App.
+
 
 ### Routes:
 The routes to the various pages/components were built using `React` as well as `BrowserRouter`, `Switch` and `Route` from `React-Router-Dom`.
@@ -85,64 +91,62 @@ The routes to the various pages/components were built using `React` as well as `
 ```javascript
     <BrowserRouter>
       <NavBar />
-      <Switch>
-        <Route exact path='/' component={Home}/>
-        <Route exact path='/spells' component={SpellIndex}/>
-        <Route exact path='/traps' component={TrapIndex}/>
-        <Route exact path='/monsters' component={MonsterIndex}/>
-        <Route exact path='/wishlist' component={WishList}/>
-        <Route exact path='/:id' component={CardShow}/>
-        
-      </Switch>
+      <div className="site-wrapper">
+        <Switch>
+          <Route exact path='/register' component={Register} />
+          <Route exact path='/museums' component={MuseumsIndex} />
+          <Route exact path='/museums/:id' component={MuseumShow} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/filteredmuseums' component={FilteredMuseums} />
+          <Route exact path='/profile' component={Profile} />
+          <Route exact path='/map' component={Map} />
+          <Route exact path='/exhibits' component={StandoutExhibit} />
+        </Switch>
+      </div>
+      <Footer />
     </BrowserRouter>
 ```
 
 
 ### Components:
 
-Once we had installed our dependencies for the project we started building out the different components we needed, as per our wireframe. 
+Once I installed the dependencies I needed for the project I started building out the different components I decided to build, as per the wireframe and our Asana tasks. 
 
-**Navbar:** We used Bulma to assist us in obtaining a Navbar component which we felt was suitable for our website and then began adding the home, random and wishlist buttons. Once these buttons and the background of the Navbar component was designed, we began by chaining a get request to get the three different categories of cards. We were then able to create a nested onClick function that first randomised a card from one of the three categories and then sent the user to a specific page showing the id of the card. 
+**Navbar:** I used Bulma and FontAwesome to assist me in building out the Navbar component and then began adding navigation links to the Home (by clicking on the logo), All Museums, Museum Map, Exhibits, Profile, Login, Register and Logout. 
 
-```javascript
-const NavBar = () => {
-  const history = useHistory()
-  const [cards, setCards] = useState([])
-  const [allCardId, setAllCardId] = useState([])
-  const [hasError, setHasError] = useState(false)
+If a user was not logged in, I wanted the navbar to display the options 'Register' or 'Login,' and if the user was logged in, I wanted the navbar to show the options 'Logout,' and the 'Profile name' To do this, I utilised a ternary that determines whether or not the user is authenticated. The userIsAuthenticated function first determines whether or not a payload exists; if it does not, false is returned. The function then checks if the current time of the token is less than the expiry time, and if it returns true, the user can be authenticated. I also used the token to display the username and then use that to display on the profile name.
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const { data } = await axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?type=Normal%20Monster,spell%20card,trap%20card')
-        // console.log('data', data)
-        setCards(data.data)
-      } catch (err) {
-        console.log(err)
-        setHasError(true)
-      }
-    }
-    getData()
-    
-  }, [])
 
-  function sendToRandom() {
-    {allCardId ?
-      history.push(`/${allCardId.id}`)
-      : 
-      hasError, 'Something went wrong 🆘'
-    }
-    
-  }
+```js
 
-  function handleRandom() {
-    const item = [Math.floor(Math.random() * cards.length)]
-    setAllCardId(cards[item])
-    
-    sendToRandom()
- 
-  }
+const userIsAuthenticated = () => {
+   const payload = getPayload()
+   if (!payload) return false
+   const now = Math.round(Date.now() / 1000)
+   return now < payload.exp
+}
 ```
+
+
+
+```js
+<div className="navbar-end">
+ {!userIsAuthenticated() ?
+     <>
+        <div className="navbar-item"><Link to="/register" className="link is-size-6 has-text-weight-light"><i className="fas fa-clipboard-check has-text-success-dark"></i> Register</Link></div>
+        <div className="navbar-item"><Link to="/login" className="link is-size-6 has-text-weight-light"><i className="fas fa-sign-in-alt has-text-danger-dark"></i> Login</Link></div>
+     </>
+     :
+     <>
+        <div className="navbar-item"><Link to="/profile" className="link is-size-6 has-text-weight-light"><i className="fas fa-user has-text-info"></i> {username}</Link></div>
+        <div className="navbar-item"><a className="link is-size-6 has-text-weight-light" onClick={handleLogout}><i className="fas fa-sign-out-alt has-text-danger-dark"></i> Logout</a></div>
+     </>
+ }
+</div>
+```
+
+
 
 **Homepage:** We bagan creating the homepage by adding a background using CSS, three buttons (one for each card category) and a search bar. We then built out the homepage by using `Link` import from `React-Router-Dom` to navigate to the three card category pages. For finishing touches, we added some animations to the buttons.
 
