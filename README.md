@@ -1,4 +1,4 @@
-### README progress... ![15%](https://progress-bar.dev/15)
+### README progress... ![75%](https://progress-bar.dev/75)
 
 # SEI Project Three: Museum Mapper
 
@@ -62,6 +62,7 @@ As a group of four, we were briefed to **build a full-stack application**. As a 
 - Slack
 - Heroku
 - FontAwesome
+- Swiperjs
 
 
 ## 4. Project Timeline- 7 Days
@@ -77,7 +78,6 @@ We first decided to create a museum mapper app as a group. We took our time to p
 ### Backend
 
 We agreed as a group to programme the backend components of the project together so that we could all help each other code this part and to also limit the amount of time spent on the backend. One person would screenshare over a zoom videocall and the others would guide the person coding and also look out for any errors/mistakes. The back end took a few days to create, with each member of the team coding, guiding and looking out for errors/mistakes during the live coding session. We also used this time to discuss and implement the embedded or referenced relationshiops for our App. In order to seed data into the app we divided certain letters within a databas of museums to each member of the group to obtain details about the museum's location, key collections, and one image. Each member of the group then merged their museum data within the seeds file. The backend was created as a CRUD API, which used MongoDB, Mongoose, NodeJS and Express. Finally, I took up the task of adding better quality images and further images for each museum we had listed on the App, for the purposes of a carousel which I would later create. As we were creating a map with geolocations of each museum I also compiled a seeds file with the lattitude and longitude location of each museum, this assisted my colleqgue who build the map component for the App.
-
 
 
 ### Front-end
@@ -109,11 +109,8 @@ The routes to the various pages/components were built using `React` as well as `
 ```
 
 
-### Components:
-
-Once I installed the dependencies I needed for the project I started building out the different components I decided to build, as per the wireframe and our Asana tasks. 
-
-**Navbar:** I used Bulma and FontAwesome to assist me in building out the Navbar component and then began adding navigation links to the Home (by clicking on the logo), All Museums, Museum Map, Exhibits, Profile, Login, Register and Logout. 
+### _**Navbar:**_ 
+I used Bulma and FontAwesome to assist me in building out the Navbar component and then began adding navigation links to the Home (by clicking on the logo), All Museums, Museum Map, Exhibits, Profile, Login, Register and Logout. 
 
 If a user was not logged in, I wanted the navbar to display the options 'Register' or 'Login,' and if the user was logged in, I wanted the navbar to show the options 'Logout,' and the 'Profile name' To do this, I utilised a ternary that determines whether or not the user is authenticated. The userIsAuthenticated function first determines whether or not a payload exists; if it does not, false is returned. The function then checks if the current time of the token is less than the expiry time, and if it returns true, the user can be authenticated. I also used the token to display the username and then use that to display on the profile name.
 
@@ -146,132 +143,67 @@ const userIsAuthenticated = () => {
 </div>
 ```
 
+<img width="1000" alt="Not Logged In" src="https://user-images.githubusercontent.com/88886169/147880318-2aecba4c-d1d5-49f7-804f-5ff05df17113.png">
+<img width="1000" alt="Logged In" src="https://user-images.githubusercontent.com/88886169/147880320-209fcac3-afc0-4bdd-a4df-b368afbce872.png">
 
 
-**Homepage:** We bagan creating the homepage by adding a background using CSS, three buttons (one for each card category) and a search bar. We then built out the homepage by using `Link` import from `React-Router-Dom` to navigate to the three card category pages. For finishing touches, we added some animations to the buttons.
 
-```javascript
-const Home = () => {
+### _**Footer:**_ 
+I built out the footer with the help from Bulma and FontAwesome. I had the idea to have the copyright date automatically changing based on the year, this would mean that I wouldn't have to manually change the year every year. I also wanted to add navigation links to every member of the group's Github pages. Finally I wanted to add some interactivity to the logo and I created a gif for the logo. It was during the coding for the fotter that I came across the issue of the footer not sticking to the bottom of the page. I went away and did some research on the topic and found out that this was a common problem, especially when a particular page didnt have enough content. The simple fix was to give the particular component page a minimum viewport height, this fixed the issue.
 
-  return (
-    <section className='section' id='hero'>
-      <div className='hero-body'>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <div className='field'>
-          <p className='control has-icons-right'>
-            <input className='input is-medium is-link' type='search' placeholder='Search...' />
-            <span className='icon is-large is-right'>
-              <i className='search'>⏎</i>
-            </span>
-          </p>
-        </div>
-        <div className='has-text-centered' id='buttons'>
-          <Link to='/spells'><button className='button is-success is-medium is-rounded has-text-weight-bold mx-2 has-text-black animate__animated animate__pulse animate__slower animate__infinite'>Spell Cards</button></Link>
-          <Link to='/traps'><button className='button is-danger is-medium is-rounded has-text-weight-bold mx-2 has-text-black animate__animated animate__pulse animate__slower animate__infinite'>Trap Cards</button></Link>
-          <Link to='/monsters'><button className='button is-warning is-medium is-rounded has-text-weight-bold mx-2 has-text-black animate__animated animate__pulse animate__slower animate__infinite'>Monster Cards</button></Link>
-        </div>
+```js
+<div className="row">
+  <p className="col-sm has-text-white is-size-7 has-text-centered mb-1"> 
+  &copy;{new Date().getFullYear()} MUSEUM MAPPER INC | All rights reserved | Terms of Service | Privacy
+  </p>
+</div>
+```
+
+```js
+<div className="row">
+   <p className="col-sm has-text-white is-size-7 has-text-centered">
+     Content Creaters: <a className="link is-size-7" id="links" href="https://github.com/iglfranks" rel="noreferrer" target="_blank">Isaac</a>, <a className="link is-size-7" id="links" href="https://github.com/Kumarmehta019" rel="noreferrer" target="_blank">Kumar</a>, <a className="link is-size-7" id="links" href="https://github.com/Olys6" rel="noreferrer" target="_blank">Oliver</a> and <a className="link is-size-7" id="links" href="https://github.com/sapphire-p" rel="noreferrer" target="_blank">Sapphire</a>
+   </p>
+</div>
+```
+
+<img width="1000" alt="Footer" src="https://user-images.githubusercontent.com/88886169/147881360-bc7b9ac7-6f8c-4923-8452-e33f059fe32f.png">
+
+### _**Carousel:**_ 
+In order to create the carousel component I had to research different libraries/dependencies that would help me create a carousel to display various images for each museum. The carousel component would then slot into the museum show component. I had to read through the documentation for Swiperjs and then implement the instructions for allowing the carousel to work. I also had to install the Swiperjs library to React. I wanted the carousel to slide through the museum pictures automatically so that the user could spent their time reading the decription whilst the images changed.
+
+```js
+
+<section>
+  {museumData ?
+    <div className="swiper">
+     <div className="swiper-wrapper">
+       <Swiper spaceBetween={20} slidesPerView={1} centeredSlides={true} autoplay={{
+         'delay': 5500,
+         'disableOnInteraction': false
+        }} pagination={{
+          'clickable': true
+        }} navigation={true} className="mySwiper">
+          {museumData.map(image => {
+            return (
+             <SwiperSlide key={image}><img src={image} /></SwiperSlide>
+            )
+          })}
+        </Swiper>
+       </div>
       </div>
-    </section>
-  )
-
-}
-export default Home
-
+      :
+      <h2 className="has-text-white is-size-5">{hasError ? 'Something went wrong' : 'Page Loading...'}</h2>
+   }
+</section>
 ```
 
-**Monster, Spell & Trap pages:** These card category components were created one after another using different API endpoint get requests, they showed all the Yu-Gi-Oh cards based on the category. The data received was then displayed on the corresponding page using the `.map` method on the array of cards. An `IndexMap.js` helpers file was created to store props for how the cards should be displayed and was imported into the component to use for each card category page (rather than repeating the code over and over again).
-
-```javascript
-import React from 'react'
-import { Link } from 'react-router-dom'
+<img width="450" alt="Screenshot 2022-01-02 at 16 15 44" src="https://user-images.githubusercontent.com/88886169/147881974-52b007d5-8c71-4f3a-9053-41eada1e85a9.png"> <img width="450" alt="Screenshot 2022-01-02 at 16 15 39" src="https://user-images.githubusercontent.com/88886169/147881978-8faeb7eb-98ff-4a65-bea9-eac0724eb149.png"> <img width="450" alt="Screenshot 2022-01-02 at 16 15 25" src="https://user-images.githubusercontent.com/88886169/147881983-9f1845fe-4d84-4e7c-85ec-59378ad129d2.png"> <img width="450" alt="Screenshot 2022-01-02 at 16 15 51" src="https://user-images.githubusercontent.com/88886169/147881984-afb2c91d-44e3-41cd-8a9a-440a3e46c92f.png">
 
 
-const IndexMap = (props) => {
+### _**Styling:**_
 
-  return (
-    <div key={props.id} className='column is-one-fifth-desktop'>
-      <Link to={`/${props.id}`}>
-        <div className='card'>
-          <div className='card-header has-background-black'>
-            <div className='card-header-title is-centered cardTitle has-text-white is-underlined pl-0 pr-0 pt-3 pb-3 '>{props.name}</div>
-          </div>
-          <div className='card-image animate__animated animate__pulse animate__infinite animate__slower'>
-            <figure className='image is-1'>
-              <img src={props.card_images[0].image_url} alt={props.name} />
-            </figure>
-          </div>
-          <div className='card-content pl-0 pr-0 pt-2 pb-1 has-text-centered has-background-black has-text-white has-text-weight-bold'>
-            <h5 className="price">£ {props.card_prices[0].ebay_price}</h5>
-          </div>
-        </div>
-      </Link>
-    </div>
-  )
-
-}
-export default IndexMap
-```
-<img width="1594" alt="Monster Cards" src="https://user-images.githubusercontent.com/88886169/146175796-062894b8-f491-44d8-a909-b6351510c267.png">
-<img width="1594" alt="Spell Cards" src="https://user-images.githubusercontent.com/88886169/146175810-24040fc8-c1b2-41ff-aa4a-5c9a3bac7c8b.png">
-<img width="1594" alt="Trap Cards" src="https://user-images.githubusercontent.com/88886169/146175815-51e594bd-731f-4b58-b785-b0c38a87b891.png">
-
-**Card Show:** The card show component is a page that would display further information about each card (image, name, description and its price). Buttons to add and remove the card from the user's wishlist were also added. The url for each cocktail was used using the id of the card which we then added to `App.js` as an additional file path route `<Route path="/cocktail/:id">`. We used the id `useParams` from `react-router-dom` to add the id of the card to the API get request and then display this information on the page. We also attempted to add cards to the user's `Wish List` page by creating `add to Wish List`  and `remove from Wish List` buttons. We then created an onclick function on each button that would either add the id of the card or remove the id of the card from local storage. We, unfortunately, ran out of time to build out the add and remove to Wish List feature.
-
-```javascript
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import { useParams, Link } from 'react-router-dom'
-import 'animate.css'
-
-const CardShow = () => {
-
-  const [chosenCard, setChosenCard] = useState(null)
-  const [hasError, setHasError] = useState(false)
-
-  const { id } = useParams()
-
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const { data } = await axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?id=${id}`)
-        setChosenCard(data.data)
-        console.log('Chosen card', chosenCard)
-      } catch (err) {
-        setHasError(true)
-      }
-    }
-    getData()
-
-  }, [id])
-
-  const handleAdd = () => {
-    window.localStorage.setItem(`wishListCard${window.localStorage.length}`, id)
-  }
-
-  const handleRemove = () => {
-    for (let i = 0; i < window.localStorage.length; i++) {
-      const myValue = window.localStorage.getItem(`wishListCard${i}`)
-      if (myValue === id) {
-        window.localStorage.removeItem(`wishListCard${i}`)
-      }
-    }
-  }
-
-```
-
-
-<img width="1581" alt="Card Show" src="https://user-images.githubusercontent.com/88886169/146180806-753afb21-94ff-4fc4-be26-64a72f76a25c.png">
-
-**Wish List:** The Wish List component is a page that displays the user's cards that they have added to the wishlist. Unfortunately, we had run out of time to implement this feature. We wanted the user to have a collection of cards that they had added to the wishlist and there would be a total cost of buying these cards.
-
-**Styling:**
-
-The layout was created using the Bulma framework and with a bit of help from CSS. This really helped to provide the site with continuity and structure across all the pages of the website. Animate.css was used to animate the website and give various functions on the website an aesthetically pleasing feel.
+The layout was created using the Bulma framework, CSS and FontAwesome. This really helped to provide the site with continuity and structure across all the pages of the App.
 
 
 ## 5. Bugs
@@ -310,6 +242,9 @@ The layout was created using the Bulma framework and with a bit of help from CSS
 - Utilising Insomnia to test API endpoints and get requests
 - Creating a wireframe on Figma
 - Learning to work as a pair and working around each others schedule
+
+
+
 
 
 
