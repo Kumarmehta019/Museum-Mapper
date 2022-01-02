@@ -233,6 +233,7 @@ The layout was created using the Bulma framework, CSS and FontAwesome. This real
 - Fix the bugs.
 - Make the App mobile responsive.
 - Add more CSS and styling to the App.
+- Duplicate favourited museums can be added to the profile page.
 
 
 ## 8. Key Learnings
