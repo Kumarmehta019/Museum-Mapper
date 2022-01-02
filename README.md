@@ -68,7 +68,7 @@ As a group of four, we were briefed to **build a full-stack application**. As a 
 ## 4. Project Timeline- 7 Days
 
 ### Planning:
-We first decided to create a museum mapper app as a group. We took our time to plan out the front-end and backend in pseudocode so we could build out these parts of the app successfully when it came to coding these parts. I used Fisma to develop wireframes after deciding on the basis for the app. After I finished the wireframes, we utilised Asana to determine which tasks needed to be performed and who would be in charge of completing them. 
+We first decided to create a museum mapper app as a group. We took our time to plan out the front-end and backend in pseudocode so we could build out these parts of the app successfully when it came to coding these parts. I used Fisma to develop wireframes after deciding on the basis for the app. After I finished the wireframes, we used Asana to determine which tasks needed to be performed and who would be in charge of completing them. 
 
 <img width="450" alt="Home" src="https://user-images.githubusercontent.com/88886169/147878538-19704ac9-64bd-48e2-96e2-cdd0d5f39935.png"> <img width="450" alt="Index" src="https://user-images.githubusercontent.com/88886169/147878543-22a500f8-2de8-4a13-862c-c62f5bd679af.png"> <img width="450" alt="Register" src="https://user-images.githubusercontent.com/88886169/147878551-125d7493-15b7-4619-a3a5-00b076c220d4.png"> <img width="450" img height="340" alt="Screenshot 2022-01-02 at 14 21 09" src="https://user-images.githubusercontent.com/88886169/147878755-80600529-dab2-4ea7-9a31-39a7997c7e80.png">
 
@@ -77,12 +77,12 @@ We first decided to create a museum mapper app as a group. We took our time to p
 
 ### Backend
 
-We agreed as a group to programme the backend components of the project together so that we could all help each other code this part and to also limit the amount of time spent on the backend. One person would screenshare over a zoom videocall and the others would guide the person coding and also look out for any errors/mistakes. The back end took a few days to create, with each member of the team coding, guiding and looking out for errors/mistakes during the live coding session. We also used this time to discuss and implement the embedded or referenced relationshiops for our App. In order to seed data into the app we divided certain letters within a databas of museums to each member of the group to obtain details about the museum's location, key collections, and one image. Each member of the group then merged their museum data within the seeds file. The backend was created as a CRUD API, which used MongoDB, Mongoose, NodeJS and Express. Finally, I took up the task of adding better quality images and further images for each museum we had listed on the App, for the purposes of a carousel which I would later create. As we were creating a map with geolocations of each museum I also compiled a seeds file with the lattitude and longitude location of each museum, this assisted my colleqgue who build the map component for the App.
+We agreed as a group to programme the backend components of the project together so that we could all help each other code this part and to also limit the amount of time spent on the backend. One person would screen share over a zoom video call and the others would guide the person coding and also look out for any errors/mistakes. The backend took a few days to create, with each member of the team coding, guiding and looking out for errors/mistakes during the live coding session. We also used this time to discuss and implement the embedded or referenced relationships for our App. In order to seed data into the app we divided certain letters within a database of museums to each member of the group to obtain details about the museum's location, key collections, and one image. Each member of the group then merged their museum data within the seeds file. The backend was created as a CRUD API, which used MongoDB, Mongoose, NodeJS and Express. Finally, I took up the task of adding better quality images and further images for each museum we had listed on the App, for the purposes of a carousel which I would later create. As we were creating a map with geo locations of each museum I also compiled a seeds file with the latitude and longitude location of each museum, this assisted my colleague who built the map component for the App.
 
 
 ### Front-end
 
-For the front-end, we would meet in our daily stand ups (morning and evening) and discuss what components everyone wanted to focus on for the day and what thewy acomplished that day. For this project, I worked on the Navbar, Footer, Favicon, Carousel and part of the Profile. I also worked on the CSS for the App.
+For the front-end, we would meet in our daily stand ups (morning and evening) and discuss what components everyone wanted to focus on for the day and what they accomplished that day. For this project, I worked on the Navbar, Footer, Favicon, Carousel and part of the Profile. I also worked on the CSS for the App.
 
 
 ### Routes:
@@ -149,7 +149,7 @@ const userIsAuthenticated = () => {
 
 
 ### _**Footer:**_ 
-I built out the footer with the help from Bulma and FontAwesome. I had the idea to have the copyright date automatically changing based on the year, this would mean that I wouldn't have to manually change the year every year. I also wanted to add navigation links to every member of the group's Github pages. Finally I wanted to add some interactivity to the logo and I created a gif for the logo. It was during the coding for the fotter that I came across the issue of the footer not sticking to the bottom of the page. I went away and did some research on the topic and found out that this was a common problem, especially when a particular page didnt have enough content. The simple fix was to give the particular component page a minimum viewport height, this fixed the issue.
+I built out the footer with the help from Bulma and FontAwesome. I had the idea to have the copyright date automatically change based on the year, this would mean that I wouldn't have to manually change the year every year. I also wanted to add navigation links to every member of the group's Github pages. Finally I wanted to add some interactivity to the logo and I created a gif for the logo. It was during the coding for the footer that I came across the issue of the footer not sticking to the bottom of the page. I went away and did some research on the topic and found out that this was a common problem, especially when a particular page didn't have enough content. The simple fix was to give the particular component page a minimum viewport height, this fixed the issue.
 
 ```js
 <div className="row">
@@ -170,7 +170,7 @@ I built out the footer with the help from Bulma and FontAwesome. I had the idea 
 <img width="1000" alt="Footer" src="https://user-images.githubusercontent.com/88886169/147881360-bc7b9ac7-6f8c-4923-8452-e33f059fe32f.png">
 
 ### _**Carousel:**_ 
-In order to create the carousel component I had to research different libraries/dependencies that would help me create a carousel to display various images for each museum. The carousel component would then slot into the museum show component. I had to read through the documentation for Swiperjs and then implement the instructions for allowing the carousel to work. I also had to install the Swiperjs library to React. I wanted the carousel to slide through the museum pictures automatically so that the user could spent their time reading the decription whilst the images changed.
+In order to create the carousel component I had to research different libraries/dependencies that would help me create a carousel to display various images for each museum. The carousel component would then slot into the museum show component. I had to read through the documentation for Swiperjs and then implement the instructions for allowing the carousel to work. I also had to install the Swiperjs library to React. I wanted the carousel to slide through the museum pictures automatically so that the user could spend their time reading the description whilst the images changed.
 
 ```js
 
@@ -210,7 +210,7 @@ The layout was created using the Bulma framework, CSS and FontAwesome. This real
 
 - The App is not fully mobile responsive and with more time this could be fixed.
 - There was a bug with the carousel images displaying half an image size, but I managed to fix this.
-- The map doesnt seem to show up, since deploying the project on Heroku.
+- The map doesn't seem to show up, since deploying the project on Heroku.
 
 ## 6. Wins and Challenges
 
@@ -218,14 +218,14 @@ The layout was created using the Bulma framework, CSS and FontAwesome. This real
 
 - Group Coding - this was my first time working in a big group coding on a full-stack project. Our group worked really well together and really played to each other's strengths and weaknesses. Having an extra pair of eyes on a project really helps to overcome problems and think of different solutions to problems. It also improves your learning on topics/areas you require further development on.
 
-- Functionality- Given the short time we were given, I am amazed at how far we came and what we were able to build. If given more time I wonder how much more we could have built out this App and making it more mobile responsive.
+- Functionality- Given the short time we were given, I am amazed at how far we came and what we were able to build. If given more time I wonder how much more we could have built out this App and made it more mobile responsive.
 
-- Full-Stack Project- As this was my first full-stack project it was great to see how the front-end conencted with the backend. It was also amazing how much we had acomplished as a group but also individually to build out this App.
+- Full-Stack Project- As this was my first full-stack project it was great to see how the front-end connected with the backend. It was also amazing how much we had accomplished as a group but also individually to build out this App.
 
 ### Challenges:
 
-- One of the biggest challenges we faced during this project was completing the project to a standard we were all happy with. We were unable to implement a moble responsive App but are extremely happy with the end result. 
-- How to use Swiperjs and implementing this towards the project.
+- One of the biggest challenges we faced during this project was completing the project to a standard we were all happy with. We were unable to implement a mobile responsive App but are extremely happy with the end result. 
+- How to use Swiperjs and implement this in the project.
 - How to use local storage to store data and use this data to display the username on the navbar.
 
 ## 7. Future Improvements
@@ -241,7 +241,7 @@ The layout was created using the Bulma framework, CSS and FontAwesome. This real
 - Learning to use Bulma CSS Framework.
 - Utilising Insomnia to test API endpoints and get requests.
 - Creating a wireframe on Figma.
-- Learning to work as a group and working around each others schedule.
+- Learning to work as a group and working around each other's schedule.
 
 
 
