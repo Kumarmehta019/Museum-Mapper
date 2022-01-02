@@ -50,7 +50,7 @@ As a group of four, we were briefed to **build a full-stack application**. As a 
 - Git
 - GitHub
 - Google Fonts
-- Fisma- Wireframe
+- Figma- Wireframe
 - Insomnia- REST Client
 - Yarn
 - MongoDB
