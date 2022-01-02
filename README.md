@@ -208,40 +208,40 @@ The layout was created using the Bulma framework, CSS and FontAwesome. This real
 
 ## 5. Bugs
 
-- The random button doesnt work when you first click on it but when you click on it again, it works.
-- The Wish List on the card show page doesn't work properly, but this may also be due to running out of time.
+- The App is not fully mobile responsive and with more time this could be fixed.
+- There was a bug with the carousel images displaying half an image size, but I managed to fix this.
+- The map doesnt seem to show up, since deploying the project on Heroku.
 
 ## 6. Wins and Challenges
 
 ### Wins:
 
-- Pair Coding - this was my first time pair coding on a project. Isaac and I worked really well together and really played to each other's strengths and weaknesses. Having an extra pair of eyes on a project really helps to overcome errors that each of us might have. It also improves your learning on topics/areas you require further development on.
+- Group Coding - this was my first time working in a big group coding on a full-stack project. Our group worked really well together and really played to each other's strengths and weaknesses. Having an extra pair of eyes on a project really helps to overcome problems and think of different solutions to problems. It also improves your learning on topics/areas you require further development on.
 
-- Functionality- Given the short time we were given, I am amazed at how far we came and what we were able to build. If given more time I wonder how much more we could have built out this website and completed the components we didn't get around to completing.
+- Functionality- Given the short time we were given, I am amazed at how far we came and what we were able to build. If given more time I wonder how much more we could have built out this App and making it more mobile responsive.
 
-- React and APIs- Using React and a public API to create a website which displays the information to a user in a fun and aesthetically pleasing way.
+- Full-Stack Project- As this was my first full-stack project it was great to see how the front-end conencted with the backend. It was also amazing how much we had acomplished as a group but also individually to build out this App.
 
 ### Challenges:
 
-- Time - one of the biggest challenges we faced during this project was completing the project to a standard we were both happy with. We were unable to implement the search and the Wish List functionality, which we could have if we were given more time. These however were stretch goals for us as our main purpose was to display the three card categories and individual card show page. 
-
-- Bulma CSS Framework - Figuring out how to use the different components of Bulma and what variations you could make to these took some time to figure out, but it was also a win as we both knew how to use Bulma by the end of the project.
+- One of the biggest challenges we faced during this project was completing the project to a standard we were all happy with. We were unable to implement a moble responsive App but are extremely happy with the end result. 
+- How to use Swiperjs and implementing this towards the project.
+- How to use local storage to store data and use this data to display the username on the navbar.
 
 ## 7. Future Improvements
 
-- Fix the bugs
-- Make the website mobile responsive
-- complete the Wish List functionality
-- complete the search functionality
+- Fix the bugs.
+- Make the App mobile responsive.
+- Add more CSS and styling to the App.
 
 
 ## 8. Key Learnings
 
-- Learning to use React `useEffect` and `useState` as well as the React-Router-Dom. 
-- Learning to use Bulma CSS Framework
-- Utilising Insomnia to test API endpoints and get requests
-- Creating a wireframe on Figma
-- Learning to work as a pair and working around each others schedule
+- Learning to read documentation for a new library and implementing it on the project.
+- Learning to use Bulma CSS Framework.
+- Utilising Insomnia to test API endpoints and get requests.
+- Creating a wireframe on Figma.
+- Learning to work as a group and working around each others schedule.
 
 
 
