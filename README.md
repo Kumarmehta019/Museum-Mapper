@@ -16,7 +16,7 @@
 |    8     | **`Key Learnings`**|
 
  ## 1. Project Overview
-As a group of four, we were briefed to **build a full-stack application**. As a group we had to decide on a common theme for the project. We all made a list of interests we had and from that we both had a common interest in museums and decided to build a website dedicated to information about natural history museums in England.
+As a group of four, we were briefed to **build a full-stack application**. As a group we had to decide on a common theme for the project. We all made a list of interests we had and from that we all had a common interest in museums and decided to build a website dedicated to information about natural history museums in England.
 
 <img width="1800" alt="Home" src="https://user-images.githubusercontent.com/88886169/147877473-e40126bc-dcea-435a-a9f3-198d08c720b2.png">
 
