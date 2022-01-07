@@ -16,7 +16,7 @@
 |    8     | **`Key Learnings`**|
 
  ## 1. Project Overview
-As a group of four, we were briefed to **build a full-stack application**. As a group we had to decide on a common theme for the project. We all made a list of interests we had and from that we all had a common interest in museums and decided to build a website dedicated to information about natural history museums in England.
+As a group of four ([**Isaac**](https://github.com/iglfranks), [**Sapphire**](https://github.com/sapphire-p), [**Oliver**](https://github.com/Olys6) and I) we were briefed to **build a full-stack application**. We had to decide on a common theme for the project so we all made a list of interests we had and from that we had a common interest in museums and decided to build a website dedicated to information about natural history museums in England.
 
 <img width="1800" alt="Home" src="https://user-images.githubusercontent.com/88886169/147877473-e40126bc-dcea-435a-a9f3-198d08c720b2.png">
 
@@ -40,29 +40,29 @@ As a group of four, we were briefed to **build a full-stack application**. As a 
 
 ## 3. Technologies Used
 
-- React.js
-- JavaScript (ES6)
-- HTML5
-- CSS
-- Bulma- CSS Framework 
-- Animate.css
-- Axios
-- Git
-- GitHub
-- Google Fonts
-- Figma- Wireframe
-- Insomnia- REST Client
-- Yarn
-- MongoDB
-- NodeJS
-- Express
-- JSONWebToken
-- Asana- Planning
-- Zoom
-- Slack
-- Heroku
-- FontAwesome
-- Swiperjs
+- React.js.
+- JavaScript.
+- HTML.
+- CSS.
+- Bulma- CSS Framework. 
+- Animate.css.
+- Axios.
+- Git.
+- GitHub.
+- Google Fonts.
+- Figma- Wireframe.
+- Insomnia- REST Client.
+- Yarn.
+- MongoDB.
+- Node.js.
+- Express.
+- JSON Web Token.
+- Asana- Planning.
+- Zoom.
+- Slack.
+- Heroku.
+- FontAwesome.
+- Swiperjs.
 
 
 ## 4. Project Timeline- 7 Days
@@ -72,6 +72,21 @@ We first decided to create a museum mapper app as a group. We took our time to p
 
 <img width="450" alt="Home" src="https://user-images.githubusercontent.com/88886169/147878538-19704ac9-64bd-48e2-96e2-cdd0d5f39935.png"> <img width="450" alt="Index" src="https://user-images.githubusercontent.com/88886169/147878543-22a500f8-2de8-4a13-862c-c62f5bd679af.png"> <img width="450" alt="Register" src="https://user-images.githubusercontent.com/88886169/147878551-125d7493-15b7-4619-a3a5-00b076c220d4.png"> <img width="450" img height="340" alt="Screenshot 2022-01-02 at 14 21 09" src="https://user-images.githubusercontent.com/88886169/147878755-80600529-dab2-4ea7-9a31-39a7997c7e80.png">
 
+### Work Split:
+
+We all built out the backend together but the front-end tasks were split as follows:
+
+#### 1. Sapphire:
+Sapphire worked on the filter panel, filtered museums, map page, register and login pages. Sapphire worked on the error handling and CSS for her components. 
+
+#### 2. Isaac:
+Isaac worked on the show all museums page, single museum page, adding and deleting from favourites and the ratings functions. Isaac worked on the error handling and CSS for his components.
+
+#### 3. Oliver:
+Oliver worked on the logo, home page, standout museums, profile page and helped Isaac with the adding to the favourites function. Oliver worked on the error handling and CSS for his components.
+
+#### 4. Kumar:
+I worked on the navbar, footer, carousel feature, map data and some styling for the profile and single museum page. I worked on the error handling and CSS for my components.
 
 ### Getting Started:
 
@@ -149,7 +164,7 @@ const userIsAuthenticated = () => {
 
 
 ### _**Footer:**_ 
-I built out the footer with the help from Bulma and FontAwesome. I had the idea to have the copyright date automatically change based on the year, this would mean that I wouldn't have to manually change the year every year. I also wanted to add navigation links to every member of the group's Github pages. Finally I wanted to add some interactivity to the logo and I created a gif for the logo. It was during the coding for the footer that I came across the issue of the footer not sticking to the bottom of the page. I went away and did some research on the topic and found out that this was a common problem, especially when a particular page didn't have enough content. The simple fix was to give the particular component page a minimum viewport height, this fixed the issue.
+I built out the footer with the help from Bulma and FontAwesome. I had the idea to have the copyright date automatically change based on the year, this would mean that I wouldn't have to manually change the year every year. I also wanted to add navigation links to every member of the group's GitHub pages. Finally I wanted to add some interactivity to the logo and I created a gif for the logo. It was during the coding for the footer that I came across the issue of the footer not sticking to the bottom of the page. I went away and did some research on the topic and found out that this was a common problem, especially when a particular page didn't have enough content. The simple fix was to give the particular component page a minimum viewport height, this fixed the issue.
 
 ```js
 <div className="row">
