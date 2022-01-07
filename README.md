@@ -68,7 +68,7 @@ As a group of four ([**Isaac**](https://github.com/iglfranks), [**Sapphire**](ht
 ## 4. Project Timeline- 7 Days
 
 ### Planning:
-We first decided to create a museum mapper app as a group. We took our time to plan out the front-end and backend in pseudocode so we could build out these parts of the app successfully when it came to coding these parts. I used Fisma to develop wireframes after deciding on the basis for the app. After I finished the wireframes, we used Asana to determine which tasks needed to be performed and who would be in charge of completing them. 
+We first decided to create a museum mapper app as a group. We took our time to plan out the front-end and backend in pseudocode so we could build out these parts of the App successfully when it came to coding these parts. I used Fisma to develop wireframes after deciding on the basis for the App. After I finished the wireframes, we used Asana to determine which tasks needed to be performed and who would be in charge of completing them. 
 
 <img width="450" alt="Home" src="https://user-images.githubusercontent.com/88886169/147878538-19704ac9-64bd-48e2-96e2-cdd0d5f39935.png"> <img width="450" alt="Index" src="https://user-images.githubusercontent.com/88886169/147878543-22a500f8-2de8-4a13-862c-c62f5bd679af.png"> <img width="450" alt="Register" src="https://user-images.githubusercontent.com/88886169/147878551-125d7493-15b7-4619-a3a5-00b076c220d4.png"> <img width="450" img height="340" alt="Screenshot 2022-01-02 at 14 21 09" src="https://user-images.githubusercontent.com/88886169/147878755-80600529-dab2-4ea7-9a31-39a7997c7e80.png">
 
@@ -92,12 +92,12 @@ I worked on the navbar, footer, carousel feature, map data and some styling for 
 
 ### Backend
 
-We agreed as a group to programme the backend components of the project together so that we could all help each other code this part and to also limit the amount of time spent on the backend. One person would screen share over a zoom video call and the others would guide the person coding and also look out for any errors/mistakes. The backend took a few days to create, with each member of the team coding, guiding and looking out for errors/mistakes during the live coding session. We also used this time to discuss and implement the embedded or referenced relationships for our App. In order to seed data into the app we divided certain letters within a database of museums to each member of the group to obtain details about the museum's location, key collections, and one image. Each member of the group then merged their museum data within the seeds file. The backend was created as a CRUD API, which used MongoDB, Mongoose, NodeJS and Express. Finally, I took up the task of adding better quality images and further images for each museum we had listed on the App, for the purposes of a carousel which I would later create. As we were creating a map with geo locations of each museum I also compiled a seeds file with the latitude and longitude location of each museum, this assisted my colleague who built the map component for the App.
+We agreed as a group to programme the backend components of the project together so that we could all help each other code this part and to also limit the amount of time spent on the backend. One person would screen share over a zoom video call and the others would guide the person coding and also look out for any errors/mistakes. The backend took a few days to create, with each member of the team coding, guiding and looking out for errors/mistakes during the live coding session. We also used this time to discuss and implement the embedded or referenced relationships for our App. In order to seed data into the App we divided certain letters within a database of museums to each member of the group to obtain details about the museum's location, key collections, and one image. Each member of the group then merged their museum data within the seeds file. The backend was created as a CRUD API, which used MongoDB, Mongoose, NodeJS and Express. Finally, I took up the task of adding better quality images and further images for each museum we had listed on the App, for the purposes of a carousel which I would later create. As we were creating a map with geo locations of each museum I also compiled a seeds file with the latitude and longitude location of each museum, this assisted my colleague who built the map component for the App.
 
 
 ### Front-end
 
-For the front-end, we would meet in our daily stand ups (morning and evening) and discuss what components everyone wanted to focus on for the day and what they accomplished that day. For this project, I worked on the Navbar, Footer, Favicon, Carousel and part of the Profile. I also worked on the CSS for the App.
+For the front-end, we would meet in our daily stand ups (morning and evening) and discuss what components everyone wanted to focus on for the day and what they accomplished that day. I discussed above the components/features I built for this project.
 
 
 ### Routes:
@@ -233,7 +233,7 @@ The layout was created using the Bulma framework, CSS and FontAwesome. This real
 
 - Group Coding - this was my first time working in a big group coding on a full-stack project. Our group worked really well together and really played to each other's strengths and weaknesses. Having an extra pair of eyes on a project really helps to overcome problems and think of different solutions to problems. It also improves your learning on topics/areas you require further development on.
 
-- Functionality- Given the short time we were given, I am amazed at how far we came and what we were able to build. If given more time I wonder how much more we could have built out this App and made it more mobile responsive.
+- Functionality- Given the short time we were given, I am amazed at how far we came and what we were able to build. If given more time I wonder how much more we could have built out this App.
 
 - Full-Stack Project- As this was my first full-stack project it was great to see how the front-end connected with the backend. It was also amazing how much we had accomplished as a group but also individually to build out this App.
 
