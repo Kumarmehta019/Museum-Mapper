@@ -63,6 +63,7 @@ As a group of four ([**Isaac**](https://github.com/iglfranks), [**Sapphire**](ht
 - Heroku.
 - FontAwesome.
 - Swiperjs.
+- NPM.
 
 
 ## 4. Project Timeline- 7 Days
